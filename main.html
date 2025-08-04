@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caluclator</title>
+</head>
+<body style="margin : 0;
+    display: flex;
+    justify-content : center;
+    align-items: center;
+    height : 100vh;
+    background-color: hsl(0, 0%, 80%);">
+
+    <div class="bg-gray-900 w-[500px] rounded-xl">
+        <input id='display' readonly class="bg-gray-800 text-cyan-400 font-bold text-5xl w-[100%] h-30 border-0 pl-5 rounded-t-lg">
+        <div class="grid grid-cols-4 gap-[10px] p-[25px]">
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-red-500 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl flex justify-center items-center" onclick="clearDisplay()">C</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-4xl flex justify-center items-center" onclick="appendToDisplay('(')">()</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-4xl content-center" onclick="appendToDisplay('%')">%</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('/')">/</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('7')">7</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('8')">8</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('9')">9</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl flex justify-center items-center" onclick="appendToDisplay('*')">*</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('4')">4</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('5')">5</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('6')">6</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center"onclick="appendToDisplay('-')">-</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center"onclick="appendToDisplay('1')">1</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('2')">2</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('3')">3</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('+')">+</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-4xl content-center" onclick="appendToDisplay('-')">+/-</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('0')">0</button>
+            <button class="hover:cursor-pointer active:bg-slate-400 hover:bg-slate-500 bg-slate-600 text-cyan-400 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="appendToDisplay('.')">.</button>
+            <button class="hover:cursor-pointer active:bg-yellow-400 hover:bg-yellow-500 bg-yellow-200 w-[100px] h-[100px] rounded-[50%] font-bold text-5xl content-center" onclick="calculate()">=</button>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
